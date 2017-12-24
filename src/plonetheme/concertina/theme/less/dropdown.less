@@ -4,8 +4,8 @@
 @navbar-a-padding: 5px 15px 3px 15px;
 // First : we configure the navbar
 /* NAV BAR */
-@plone-sitenav-bg: yellow;
-@plone-sitenav-link-hover-bg: darken(@plone-sitenav-bg, 20%);
+@plone-sitenav-bg: #F1F1F1;
+@plone-sitenav-link-hover-bg: darken(@plone-sitenav-bg, 10%);
 .plone-nav > li > a {
   color: @plone-text-color;
 }
@@ -20,6 +20,15 @@
 	  // line-height: 25px;
 	}
 }
+
+/* for navbar fixed on top while scroll...
+ * Doesn't work :-(
+ div#mainnavigation-wrapper {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+* */
 
 // small screens
 /*
