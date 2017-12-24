@@ -24,4 +24,43 @@
 	      <element>template|+plone+static/components/tinymce-builded/js/tinymce/plugins/template</element>
 	    </value>
 	</record>
+	
+	<records
+      prefix="plone.bundles/webcouturier-dropdownmenu" remove="True"
+      interface="Products.CMFPlone.interfaces.IBundleRegistry">
+    </records>
+	
+	
+	<records
+      prefix="plone.bundles/webcouturier-dropdownmenu-concertina"
+      interface="Products.CMFPlone.interfaces.IBundleRegistry">
+	    <value key="resources">
+	      <element>webcouturier-dropdownmenu</element>
+	    </value>
+	    <value key="depends">jquery</value>
+	    <value key="enabled">True</value>
+	    <value key="compile">True</value>
+	    <!-- <value key="csscompilation">++plone++dropdown/dropdownmenu-compiled.css</value> -->
+	    <value key="jscompilation">++plone++dropdown/dropdownmenu-compiled.js</value>
+	    <value key="merge_with">default</value>
+	    <value key="stub_js_modules">
+	      <element>jquery</element>
+	    </value>
+
+   </records>
+	
 </registry>
+
+<!-- 
+voir comment remplacer le bundle de webcouturier.dropdownmenu par un bundle
+qui permettrait d'assurer que la CSS de webcouturier.dropdownmenu
+ne soit pas prise en compte mais celle du theme.
+Ceci permettrait de ne pas avoir les CSS de w.dm chargees en "double".
+
+NB: la suppression du bundle webcouturier-dropdownmenu fonctionne,
+il ne reste plus qu'a remplacer le bundle
+
+Voir pour supprimer un bundle :
+https://github.com/collective/webcouturier.dropdownmenu/blob/master/src/webcouturier/dropdownmenu/profiles/default/registry.xml
+
+ -->

@@ -15,14 +15,14 @@ module.exports = function (grunt) {
                     sourceMap: true,
                     outputSourceFiles: true,
                     sourceMapFileInline: false,
-                    sourceMapURL: '++theme++concertina/less/theme-compiled.less.map',
-                    sourceMapFilename: 'less/theme-compiled.less.map',
+                    sourceMapURL: '++theme++concertina/less/concertina-compiled.less.map',
+                    sourceMapFilename: 'less/concertina-compiled.less.map',
                     modifyVars: {
                         "isPlone": "false"
                     }
                 },
                 files: {
-                    'less/theme-compiled.css': 'less/theme.local.less',
+                    'less/concertina-compiled.css': 'less/concertina.less',
                 }
             }
         },
