@@ -1,0 +1,42 @@
+
+// General
+
+@default-bg-color: #FAFAFA;
+@default-text-color: #4D4D4D;
+@default-link-color: #086ca3;
+// @default-bg-color: #25FA25;
+
+/*
+ * Navbar and dropdown
+ */
+@navbar-a-padding: 5px 15px 5px 15px;
+// First : we configure the navbar
+/* NAV BAR */
+// @plone-sitenav-bg: #F1F1F1;
+@plone-sitenav-bg: rgb(255, 204, 128);
+@plone-sitenav-link-hover-bg: darken(@plone-sitenav-bg, 10%);
+@plone-sitenav-link-outline: darken(@plone-sitenav-bg, 35%) solid 3px;
+@plone-sitenav-link-shadow: -3px 3px 3px darken(@plone-sitenav-bg, 20%);
+
+// navbar and dropdownmenu heights
+@plone-sitenav-link-height: 25px;
+@plone-sitenav-line-height: 30px;
+@plone-navbar-height: 40px;
+
+// breadcrumb
+@breadcrumb-bg-color: darken(@default-bg-color, 5%);
+@breadcrumb-link-color: @default-link-color;
+@breadcrumb-current-color: @default-text-color;
+
+// footer
+@portal-footer-wrapper-default-color: black;
+
+// mixin classes
+.shadowed {
+	box-shadow: @plone-sitenav-link-shadow;
+}
+
+.plone-breadcrumb {
+	background-color: @breadcrumb-bg-color;
+	height: 35px;
+}

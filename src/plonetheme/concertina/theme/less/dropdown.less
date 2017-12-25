@@ -1,47 +1,35 @@
 /*
  * Navbar and dropdown
  */
-@navbar-a-padding: 5px 15px 3px 15px;
 // First : we configure the navbar
 /* NAV BAR */
-@plone-sitenav-bg: #F1F1F1;
-@plone-sitenav-link-hover-bg: darken(@plone-sitenav-bg, 10%);
+// @plone-sitenav-bg: #F1F1F1;
 .plone-nav > li > a {
   color: @plone-text-color;
+  &:hover {
+  	.shadowed;
+  }
 }
 // sitenav
 .plone-navbar {
     min-height: 20px;
-    height: 30px;
+    height: @plone-navbar-height;
 }
 .plone-navbar-nav {
 	> li > a {
 	  padding: @navbar-a-padding;
-	  // line-height: 25px;
+	  line-height: @plone-sitenav-line-height;
 	}
 }
 
-/* for navbar fixed on top while scroll...
- * Doesn't work :-(
- div#mainnavigation-wrapper {
+// for navbar fixed on top while scroll...
+// Doesn't work :-(
+/*
+div#mainnavigation-wrapper {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
-}
-* */
-
-// small screens
-/*
-.plone-navbar-toggle {
-	color: red;
-	background-color: green;
-	z-index: 9999;
-}
-
-// TODO : when small screen, menu...
-#portal-globalnav-collapse[aria-expanded=true] {
-	z-index: 999999;
-	background-color: red;
+	// .container-fluid;
 }
 */
 
@@ -109,12 +97,14 @@
     a {
       // Color?
       color: white;
+      // box-shadow: @plone-sitenav-link-shadow;
       display: block;
-      line-height: 20px;
+      line-height: @plone-sitenav-link-height;
       min-width: 14em;
       // padding: 10px 15px 10px 15px;
       padding: @navbar-a-padding;
       position: relative;
+      .shadowed;
       &:hover {
       	// Color?
         background-color: @plone-sitenav-link-hover-bg;

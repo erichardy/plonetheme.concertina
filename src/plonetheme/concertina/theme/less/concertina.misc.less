@@ -1,4 +1,14 @@
-/* our custom styles */
+
+// General
+body {
+	background-color: @default-bg-color;
+}
+
+// footer
+#portal-footer-wrapper {
+	background-color: @plone-sitenav-bg;
+	color: @portal-footer-wrapper-default-color;
+}
 
 // DELETE ME:
 .custom-theme-marker {
@@ -42,11 +52,12 @@
 
 #portal-breadcrumbs {
 	height: 30px;
-	margin-top: -16px;
+	margin-top: -21px;
 	margin-bottom: 22px;
 	ol {
 		padding: 5px 0px;
 	}
+	.plone-breadcrumb;
 }
 @media (max-width: 768px) {
 	#portal-breadcrumbs {
