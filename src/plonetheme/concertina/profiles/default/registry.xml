@@ -48,7 +48,17 @@
 	    </value>
 
    </records>
-	
+
+<!-- cf https://github.com/plone/Products.CMFPlone/issues/1663 -->
+  <records prefix="plone.bundles/plone"
+            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="merge_with"></value>
+  </records>
+  <records prefix="plone.bundles/plone-logged-in"
+            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="merge_with"></value>
+  </records>
+
 </registry>
 
 <!-- 

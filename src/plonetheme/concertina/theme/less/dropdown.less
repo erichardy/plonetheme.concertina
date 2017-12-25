@@ -4,6 +4,9 @@
 // First : we configure the navbar
 /* NAV BAR */
 // @plone-sitenav-bg: #F1F1F1;
+.plone-nav {
+	z-index: @plone-sitenav-z-index;
+}
 .plone-nav > li > a {
   color: @plone-text-color;
   &:hover {
@@ -32,7 +35,7 @@ div#mainnavigation-wrapper {
 	// .container-fluid;
 }
 */
-
+// from https://github.com/collective/webcouturier.dropdownmenu
 // dropdown
 //** Width of the `border` for generating carets that indicate dropdowns.
 @plone-caret-width-base:          4px;
@@ -40,7 +43,11 @@ div#mainnavigation-wrapper {
 @plone-caret-width-large:         5px;
 @plone-font-size-base:           16px;
 
-// a { outline: 1px dotted white; margin: 0.25em; }
+.plone-navbar-nav {
+	.selected > a {
+      	color: @color-complement-0;
+      }
+}
 .plone-navbar-nav li {
   .caret {
     display: inline-block;
@@ -68,12 +75,13 @@ div#mainnavigation-wrapper {
     // background-color: @plone-link-color;
     // Color?
     background-color: @plone-sitenav-bg;
+    opacity: 0.9;
     display: none;
     list-style: none;
     padding-left: 0;
     padding-bottom: 0;
     position: absolute;
-    z-index: 9999;
+    z-index: @plone-submenu-z-index;
     .opener {
       // Color?
       background: transparent;
@@ -104,11 +112,12 @@ div#mainnavigation-wrapper {
       // padding: 10px 15px 10px 15px;
       padding: @navbar-a-padding;
       position: relative;
-      .shadowed;
+      // .shadowed;
       &:hover {
       	// Color?
         background-color: @plone-sitenav-link-hover-bg;
         text-decoration: none;
+        .shadowed;
       }
       &:before {
         // margin-right: 10px;
