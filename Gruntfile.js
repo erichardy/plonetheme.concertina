@@ -13,10 +13,10 @@ module.exports = function (grunt) {
                     paths: [],
                     strictMath: false,
                     sourceMap: true,
-                    outputSourceFiles: true,
-                    sourceMapFileInline: false,
-                    sourceMapURL: '++theme++concertina/less/concertina-compiled.less.map',
-                    sourceMapFilename: 'less/concertina-compiled.less.map',
+                    outputSourceFiles: false,
+                    
+                    sourceMapURL: '++theme++concertina/less/concertina-compiled.css.map',
+                    sourceMapFilename: 'less/concertina-compiled.css.map',
                     modifyVars: {
                         "isPlone": "false"
                     }
@@ -97,6 +97,7 @@ module.exports = function (grunt) {
     // CWD to theme folder
     grunt.file.setBase('./src/plonetheme/concertina/theme');
 
+    grunt.registerTask('lesscc', ['less']);
     grunt.registerTask('compile', ['less', 'postcss']);
     grunt.registerTask('default', ['compile']);
     grunt.registerTask('bsync', ["browserSync:html", "watch"]);

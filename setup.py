@@ -44,6 +44,7 @@ setup(
         'z3c.jbot',
         'plone.app.theming',
         'plone.app.themingplugins',
+        'webcouturier.dropdownmenu',
     ],
     extras_require={
         'test': [
@@ -54,7 +55,6 @@ setup(
             'plone.testing>=5.0.0',
             'plone.app.contenttypes',
             'plone.app.robotframework[debug]',
-            'webcouturier.dropdownmenu',
         ],
     },
     entry_points="""

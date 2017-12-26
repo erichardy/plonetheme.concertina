@@ -54,7 +54,7 @@ gulp.task('default', ['html']);
  */
 var lessfiles = ['src/plonetheme/concertina/theme/less/*.less'];
 
-gulp.task('build-css', shell.task('grunt compile', {cwd: '.'}))
+gulp.task('build-css', shell.task('grunt lesscc', {cwd: '.'}))
 gulp.task('notifingless', ['build-css'], function() {
 	notifier.notify({title: 'LESS/CSS',
 			  message: 'build finished...'
