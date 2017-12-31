@@ -4946,7 +4946,7 @@ div#mainnavigation-wrapper {
   border-top: 4px solid transparent;
 }
 .plone-navbar-nav li .submenu a {
-  color: white;
+  color: #4d4d4d;
   display: block;
   line-height: 25px;
   min-width: 14em;
